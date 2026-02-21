@@ -69,7 +69,7 @@ namespace ProductAPI.Presentation.Controllers
             var productToUpdate = _mapper.Map<Product>(productDto);
             var response = await _productInterface.UpdateAsync(productToUpdate);
 
-            return response.Flag is true ? Ok(productDto) : BadRequest(response);
+            return response.Flag is true ? Ok(response) : BadRequest(response);
         }
 
         [HttpDelete]

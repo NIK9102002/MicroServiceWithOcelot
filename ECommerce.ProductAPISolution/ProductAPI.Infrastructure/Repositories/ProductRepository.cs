@@ -98,6 +98,7 @@ namespace ProductAPI.Infrastructure.Repositories
                     return new Response(false, "Product not found.");
                 }
 
+                context.Entry(product).State = EntityState.Detached;
                 context.Products.Update(entity);
                 await context.SaveChangesAsync();
                 return new Response(true, "Product updated successfully.");

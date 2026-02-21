@@ -19,7 +19,7 @@ namespace eCommerce.SharedLibrary.DependencyInjection
         {
             services.AddDbContext<TContext>(options =>
             {
-                options.UseSqlServer(config.GetConnectionString("ConnectionString"),
+                options.UseSqlServer(config.GetConnectionString("DefaultConnection"),
                 sqlServerOptions =>
                 {
                     sqlServerOptions.EnableRetryOnFailure();

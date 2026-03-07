@@ -7,24 +7,24 @@ namespace eCommerce.SharedLibrary.Logging
     {
         public static void LogExceptions(Exception ex)
         {
-            LogToFile(ex);
-            LogToConsole(ex);
-            LogToDebugger(ex);
+            LogToFile(ex.Message);
+            LogToConsole(ex.Message);
+            LogToDebugger(ex.Message);
         }
 
-        private static void LogToFile(Exception ex)
+        public static void LogToFile(string message)
         {
-            Log.Information(ex.Message);
+            Log.Information(message);
         }
 
-        private static void LogToConsole(Exception ex)
+        public static void LogToConsole(string message)
         {
-            Log.Warning(ex.Message);
+            Log.Warning(message);
         }
 
-        private static void LogToDebugger(Exception ex)
+        public static void LogToDebugger(string message)
         {
-            Log.Debug(ex.Message);
+            Log.Debug(message);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using eCommerce.SharedLibrary.Responses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OrderAPI.Application.DTOs;
 using OrderAPI.Application.Interfaces;
@@ -10,6 +11,7 @@ namespace OrderAPI.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class OrdersController(IOrder orderInterface, IOrderService orderService, IMapper mapper) : ControllerBase
     {
         [HttpGet]

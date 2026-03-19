@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductAPI.Application.DTOs;
 using ProductAPI.Application.Interfaces;
@@ -8,6 +9,7 @@ namespace ProductAPI.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class ProductsController : ControllerBase
     {
         private readonly IProduct _productInterface;
@@ -46,6 +48,7 @@ namespace ProductAPI.Presentation.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<ProductDTO>> CreateProduct(ProductDTO productDto)
         {
             if (!ModelState.IsValid)
@@ -59,6 +62,8 @@ namespace ProductAPI.Presentation.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
+
         public async Task<ActionResult<ProductDTO>> UpdateProduct(ProductDTO productDto)
         {
             if (!ModelState.IsValid)
@@ -73,6 +78,8 @@ namespace ProductAPI.Presentation.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
+
         public async Task<ActionResult> DeleteProduct(int id)
         {
             var response = await _productInterface.DeleteAsync(id);

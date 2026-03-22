@@ -1,13 +1,12 @@
 ﻿using AutoMapper;
 using OrderAPI.Application.DTOs;
 using OrderAPI.Application.Interfaces;
-using Polly;
 using Polly.Registry;
 using System.Net.Http.Json;
 
 namespace OrderAPI.Application.Services
 {
-    public class OrderService(IOrder orderInterface, HttpClient httpClient, ResiliencePipelineProvider<string> resiliencePipeline, IMapper mapper) : IOrderService
+    public class OrderService(IOrder orderInterface, HttpClient httpClient, IMapper mapper) : IOrderService
     {
         public async Task<ProductDTO> GetProduct(int productId)
         {
@@ -34,11 +33,9 @@ namespace OrderAPI.Application.Services
             if (order is null || order!.Id <= 0)
                 return null!;
 
-            var retryPipeline = resiliencePipeline.GetPipeline("retry-pipeline");
+            var productDTO = await GetProduct(order.ProductId);
 
-            var productDTO = await retryPipeline.ExecuteAsync(async token => await GetProduct(order.ProductId));
-
-            var appUserDTO = await retryPipeline.ExecuteAsync(async token => await GetUser(order.ClientId));
+            var appUserDTO = await GetUser(order.ClientId);
 
             return new OrderDetailsDTO(
                 order.Id,

@@ -5,8 +5,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "authenticationservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/authentication/{everything}",
@@ -24,8 +24,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "productservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/products",
@@ -41,8 +41,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "productservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}",
@@ -58,8 +58,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "productservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/products/{everything}",
@@ -74,8 +74,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5002
+          "Host": "orderservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/orders",
@@ -95,8 +95,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5002
+          "Host": "orderservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/orders/{id}",
@@ -116,8 +116,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5002
+          "Host": "orderservice",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/orders/{everything}",
@@ -129,7 +129,7 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5003"
+    "BaseUrl": "http://apigatewayservice:8080"
     //"RateLimitOptions": {
     //  "QuotaExceededMessage": "Quota exceeded. Please try again later."
     //}

@@ -13,11 +13,9 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseInfrastructurePolicy();
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
 

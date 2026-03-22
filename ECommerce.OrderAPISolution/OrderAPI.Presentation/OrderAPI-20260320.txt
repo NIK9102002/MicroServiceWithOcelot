@@ -1,0 +1,20 @@
+2026-03-20 00:50:59.348 +05:30 [INF] Object reference not set to an instance of an object.
+2026-03-20 00:50:59.795 +05:30 [WRN] Object reference not set to an instance of an object.
+2026-03-20 00:54:01.520 +05:30 [INF] Object reference not set to an instance of an object.
+2026-03-20 00:54:01.591 +05:30 [WRN] Object reference not set to an instance of an object.
+2026-03-20 00:55:24.447 +05:30 [WRN] OnRetry, Attempt: 0 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 00:57:37.598 +05:30 [INF] Object reference not set to an instance of an object.
+2026-03-20 00:57:37.611 +05:30 [WRN] Object reference not set to an instance of an object.
+2026-03-20 01:04:02.339 +05:30 [WRN] OnRetry, Attempt: 0 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:08:13.341 +05:30 [WRN] OnRetry, Attempt: 0 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:08:32.286 +05:30 [WRN] OnRetry, Attempt: 0 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:08:38.092 +05:30 [WRN] OnRetry, Attempt: 1 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:08:48.338 +05:30 [WRN] OnRetry, Attempt: 2 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:10:07.611 +05:30 [WRN] OnRetry, Attempt: 0 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:19:28.367 +05:30 [WRN] OnRetry, Attempt: 0 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:19:33.816 +05:30 [WRN] OnRetry, Attempt: 1 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:19:40.676 +05:30 [WRN] OnRetry, Attempt: 2 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:19:59.233 +05:30 [INF] The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:19:59.420 +05:30 [WRN] The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:22:00.399 +05:30 [WRN] OnRetry, Attempt: 0 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2026-03-20 01:22:09.151 +05:30 [WRN] OnRetry, Attempt: 0 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.

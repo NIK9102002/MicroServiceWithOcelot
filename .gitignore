@@ -37,7 +37,6 @@ Log/
 # =========================
 # Environment / Secrets
 # =========================
-appsettings.Development.json
 appsettings.Local.json
 *.env
 .env.*
